@@ -1,0 +1,82 @@
+body { 
+	background: #000000;
+	color: white;
+	font-size: 15px;
+	font-family: arial;
+}
+
+.mainheading {
+	color: yellow;
+	font-size: 28px;
+	position:relative;
+	left: 30%;
+	top:40px;
+}
+
+.mainbody {
+	color: white;
+	font-size: 12px;
+	position: relative;
+	top:70px;
+}
+.leftdiv{
+	position:absolute;
+	top:200px;
+	left:200px;
+	display:block;
+	font-size:15px;
+}
+.centerdiv{
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+.multiplewindow{
+	position:absolute;
+	top: 400px;
+	left: 200px;
+	display:block;
+}
+.multiplewindow2{
+	position:absolute;
+	top: 425px;
+	left: 200px;
+	display:block;
+}
+.loadajax{
+	position:absolute;
+	top: 450px;
+	left: 200px;
+	display:block;
+}
+.storetext{
+	position:absolute;
+	top: 475px;
+	left: 200px;
+	display:block;
+}
+.ajaxdiv{
+	display:none;
+}
+.wind{
+	position:absolute;
+	width:230px;
+	height:120px;
+	top:250px;
+	left:200px;
+	border:medium solid red;
+}
+.belowcenter {
+	position:absolute;
+	top:55%;
+	left:50%;
+	width:200px;
+	height:120px;
+	border: medium solid yellow;
+	color: black;
+	background: white;
+}
+.secondajax{
+	position:relative;
+	top:300px;
+}

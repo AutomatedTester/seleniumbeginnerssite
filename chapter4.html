@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Selenium: Beginners Guide</title>
+		<link type="text/css" rel="stylesheet" href="/styles/seleniumbeginners.css" />
+	</head>
+	<body>
+		<div class='mainheading'>Selenium: Beginners Guide</div>
+		<div class='mainbody'>
+			<div><a id="index" href='/'>Index</a></div>
+			<div id="datediv"><input type='text' id='dateInput'/></div>
+			<div class='belowcenter' id='auction'>
+				<p>
+					The highest bid is &pound;<span id='bid'>50</span>.
+				</p>
+				<p>
+					<input type='text' id='nextBid' />
+				</p>
+			</div>
+			<p>
+				<select id='selecttype'>
+					<option value='Selenium IDE'>Selenium IDE</option>
+					<option value='Selenium Code'>Selenium Core</option>
+					<option value='Selenium RC'>Selenium RC</option>
+					<option value='Selenium Grid'>Selenium Grid</option>
+				</select>
+			</p>
+			<p>
+				<input type='button' id='selectLoad' value='Click to load the select below'/>
+				<br />
+				<select id='ajaxLoad'>
+					
+				</select>
+			</p>
+			<p>
+				<input id='blurry' type='text' onBlur='alert(document.getElementById("blurry").value);'/>
+			</p>
+			<div id='hoverOver' class='secondajax' onMouseOver="alert('on MouseOver worked');">Mouse over this</div>
+		</div>
+		<script type="text/javascript">
+			function concatStrings(strA,strB){
+			    alert(strA + strB);
+			}
+		</script>
+				<script type="text/javascript" src="/scripts/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+				$('#selectLoad').click(function(){
+					setTimeout("loadSelect",6000);
+					function loadSelect(){
+						$('#ajaxLoad').append("<option value='Selenium IDE'>Selenium IDE</option>" +
+													"<option value='Selenium Code'>Selenium Core</option>" +
+													"<option value='Selenium RC'>Selenium RC</option>" + 
+													"<option value='Selenium Grid'>Selenium Grid</option>");
+					}
+				});
+		});
+		</script>
+	</body>
+</html>

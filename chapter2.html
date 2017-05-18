@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Selenium: Beginners Guide</title>
+		<link type="text/css" rel="stylesheet" href="/styles/seleniumbeginners.css" />
+	</head>
+	<body>
+		<div class='mainheading'>Selenium: Beginners Guide</div>
+		<div class='mainbody'>
+			<div><a href='/'>Index</a></div>
+			<div id='find'>This item div has the id of find<br/>
+			put find into the target of Selenium IDE<br/>
+			 and click the find button</div>
+			 <div id="divontheleft" class="leftdiv">
+			 	<input id='but1' value='Button with ID' type='button'/>
+			 	<br/>
+			 	<input value='Sibling Button' type='button'/>
+			 </div>
+			 <div id="divontheleft2"><input name='but2' value='Button with name' type='button'/><br/>
+			 <input id='random' type=button value='Random'></div>
+			 <div id='divinthecenter' class='centerdiv'><input type=button name='verifybutton' value='Verify this button
+                 here'/><br /><input type=button name='verifybutton1' value='chocolate'/></div>
+			 <div id='time_{{now}}'>This element has a ID that changes every time the page is loaded</div>
+		</div>
+		<script type='text/javascript'>
+			var randomButton;
+			randomButton = document.getElementById('random');
+			randomButton.addEventListener('click',function(e){
+				but1 = document.getElementById('but1');
+				but1.style.position = 'absolute';
+				but1.style.top = 10 * Math.floor(Math.random() *  50);
+				but1.style.left = 10 * Math.floor(Math.random() *  50); 
+				}, true);
+		</script>
+	</body>
+</html>

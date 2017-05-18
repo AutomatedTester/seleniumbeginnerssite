@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Selenium: Beginners Guide</title>
+		<link type="text/css" rel="stylesheet" href="/styles/seleniumbeginners.css" />
+	</head>
+	<body>
+		<div class='mainheading'>Selenium: Beginners Guide</div>
+		<div class='mainbody'>
+			<p>
+				If you have arrived here then you have installed Selenium IDE and are ready to start recording your first test.
+			</p>
+			<p>
+				<input type='radio' id='radiobutton' /> radio button
+			</p>
+			<p>
+				<select id='selecttype'>
+					<option value='Selenium IDE'>Selenium IDE</option>
+					<option value='Selenium Code'>Selenium Core</option>
+					<option value='Selenium RC'>Selenium RC</option>
+					<option value='Selenium Grid'>Selenium Grid</option>
+				</select>
+				<input name='selected(1234)' type="checkbox" />
+			</p>
+			<p>
+				<a href='/'>Home Page</a>
+				<input type=text style="display:none;" id="hiddenTextBox" />
+			</p>
+		</div>
+		<div id='divontheleft' class='leftdiv'>Assert that this text is on the page</div>
+		<div id='divinthecenter' class='centerdiv'><input type=button id='verifybutton' value='Verify this button he here'/></div>
+		<div id='multiplewindow' class='multiplewindow' onClick='window.open("windowpopup.html","popupwindow","width=300,height=200");'>Click this link to launch another window</div>
+		<div id='multiplewindow' class='multiplewindow2' onClick='window.open("windowpopup.html","popupwindow2","width=300,height=200");'>Click this link to launch another window</div>
+		<div id='loadajax' class='loadajax'>Click this link to load a page with AJAX</div>
+		<div id='storetext' class='storetext'><input type='text' id='storeinput' /></div>
+		<div id='ajaxdiv' class='ajaxdiv wind'></div>
+		<div id='html5div' class='belowcenter' contentEditable='true'>To be used after the AJAX section of the book</div>
+		<div id='secondajax' class='secondajax'><input type=button id='secondajaxbutton' value='load text to the page' /></div>
+		<script type="text/javascript" src="/scripts/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#loadajax').click(function(){
+				$('#ajaxdiv').removeClass('ajaxdiv');
+				$('#ajaxdiv').load('/loadajax');
+			});
+			$('#secondajaxbutton').click(function(){
+				$('#html5div').append("<div style='position:relative;'>I have been added with a timeout</div>");
+			});	
+		});
+		</script>
+	</body>
+</html>
